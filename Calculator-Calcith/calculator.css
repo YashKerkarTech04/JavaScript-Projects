@@ -1,0 +1,37 @@
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:yellow;
+}
+
+.container{
+  width:300px;
+  background-color:#fff;
+  padding:20px 0px 20px 33px;
+}
+
+.screen-container{
+  width:230px;
+  height:20px;
+  min-width:230px;
+  min-height:20px;
+  background-color:grey;
+  border: 3px solid black;
+  padding:12px;
+}
+
+button{
+  width:60px;
+  height:60px;
+  padding:20px;
+  background-color:black;
+  color:white;
+  border-radius:50%; 
+}
+
+.operatorButtons{
+  background-color:orange;
+}

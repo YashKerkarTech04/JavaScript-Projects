@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+ 
+  <div class="container">
+  <div class="screen-container" id="screen"></div><br>
+    <button onclick="fun7()">7</button>
+    <button onclick="fun8()">8</button>
+    <button onclick="fun9()">9</button>
+    <button id="buttonPlus" class="operatorButtons" onclick="funPlus()">+</button>
+  </p>
+
+  <p>
+    <button onclick="fun4()">4</button>
+    <button onclick="fun5()">5</button>
+    <button onclick="fun6()">6</button>
+    <button class="operatorButtons" onclick="funMinus()">-</button>
+  </p>
+
+  <p>
+    <button id="button1" onclick="fun1()">1</button>
+    <button onclick="fun2()">2</button>
+    <button onclick="fun3()">3</button>
+    <button class="operatorButtons"  onclick="funMultiply()">*</button>
+  </p>
+
+  <p>
+    <button onclick="fun0()">0</button>
+    <button onclick="funDot()">.</button>
+    <button onclick="funEvaluate()">=</button>
+    <button class="operatorButtons" onclick="funDivide()">/</button>
+  </p>
+
+  <p>
+    <button onclick="funClear()">AC</button>
+    <button onclick="funDelete()">Del</button>
+  </p>
+</div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
