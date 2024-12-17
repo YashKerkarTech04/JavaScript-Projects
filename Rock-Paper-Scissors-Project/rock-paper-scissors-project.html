@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="rock-paper-scissors.css">
+</head>
+<body>
+  <h1 id="gameTitle"> Player v/s Computer </h1>
+
+   <script>
+    let playerScore=0;
+    let computerScore=0;
+
+    function updateScore(){
+      document.getElementById('playerScoreCell').innerText=playerScore;
+      document.getElementById('computerScoreCell').innerText=computerScore;
+    }
+   </script>
+
+<div class="buttons-container">
+  <button id="rockButton"onclick="
+    const randomNumber=Math.random();
+
+    let computerMove='';
+
+
+    if(randomNumber>=0 && randomNumber < 1/3){
+      computerMove='Rock';
+    }
+    else if(randomNumber>=1/3 && randomNumber < 2/3){
+      computerMove='Paper';
+    }
+    else if(randomNumber>=2/3 && randomNumber < 1){
+      computerMove='Scissors';
+    }
+
+    console.log('Player selects: Rock');
+    console.log('Computer selects:',computerMove);
+
+    if(computerMove=='Rock'){
+      console.log('It\'s a tie.');
+    }
+    else if(computerMove=='Scissors'){
+      console.log('Player Wins');
+      playerScore++;
+    }
+    else if(computerMove=='Paper'){
+      console.log('Computer Wins');
+      computerScore++;
+    }
+
+    this.style.backgroundColor='grey';
+
+    setTimeout(() => {
+    this.style.backgroundColor = ''; //reset the color
+    }, 1000);
+
+    updateScore();
+    
+    "><img src="rock.png" alt="Rock/" id="rockImage"></button>
+  <button onclick="
+  const randomNumber2=Math.random();
+
+    let computerMove2='';
+
+    if(randomNumber2>=0 && randomNumber2 < 1/3){
+      computerMove2='Rock';
+    }
+    else if(randomNumber2>=1/3 && randomNumber2 < 2/3){
+      computerMove2='Paper';
+    }
+    else if(randomNumber2>=2/3 && randomNumber2 < 1){
+      computerMove2='Scissors';
+    }
+    console.log('Player selects: Paper');
+    console.log('Computer selects:',computerMove2);
+
+    if(computerMove2=='Paper'){
+      console.log('It\'s a tie.');
+    }
+    else if(computerMove2=='Scissors'){
+      console.log('Computer Wins');
+      computerScore++;
+    }
+    else if(computerMove2=='Rock'){
+      console.log('Player Wins');
+      playerScore++;
+    }
+
+    this.style.backgroundColor='grey';
+
+    setTimeout(()=>{
+      this.style.backgroundColor='';
+    },1000);
+
+    updateScore();
+
+  "><img src="paper.png" alt="paper/"></button>
+  <button onclick="
+   const randomNumber3=Math.random();
+
+    let computerMove3='';
+
+    if(randomNumber3>=0 && randomNumber3 < 1/3){
+      computerMove3='Rock';
+    }
+    else if(randomNumber3>=1/3 && randomNumber3 < 2/3){
+      computerMove3='Paper';
+    }
+    else if(randomNumber3>=2/3 && randomNumber3 < 1){
+      computerMove3='Scissors';
+    }
+    console.log('Player selects: Scissors');
+    console.log('Computer selects:',computerMove3);
+
+    if(computerMove3=='Scissors'){
+      console.log('It\'s a tie.');
+    }
+    else if(computerMove3=='Paper'){
+      console.log('Player Wins');
+      playerScore++;
+    }
+    else if(computerMove3=='Rock'){
+      console.log('Computer Wins');
+      computerScore++;
+    }
+
+    this.style.backgroundColor='gray';
+    setTimeout(()=>{
+      this.style.backgroundColor='';
+    },1000);
+
+    updateScore();
+
+  "><img src="scissors.png" alt="Scissors/"></button>
+</div>
+
+<div class="table-container">
+  <table border="10px" style="background-color:white;">
+    <tr>
+      <td id="playerNameCell">Player Score</td>
+      <td style="text-align:center; vertical-align:middle;">Computer's Score</td>
+    </tr>
+    <tr>
+      <td id="playerScoreCell">0</td>
+      <td id="computerScoreCell">0</td>
+    </tr>
+  </table>
+</div>
+
+<script src="rock-paper-scissors.js"></script>
+</body>
+</html>
